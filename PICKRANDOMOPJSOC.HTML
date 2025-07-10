@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Operation</title>
+	
+    <style>
+        body {
+            background-color: #001a00;
+        }
+		 .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+	
+</head>
+<body>
+
+
+	
+	<div class="container">
+	
+	<center>
+		
+		<button onclick="randomOperation()" style="color:white;background-color:green;height:100px;width:200px;font-size:130%;border-radius: 12px">Pick random operation ⚄</button>
+		<p>202302211905</p>
+		<script>
+			function randomOperation() {
+				let operations = ['op-hunter-isla','op-ghost-walker','op-phantom-nucleus','op-wolf-den','op-snow-den','op-lights-out','op-slow-chemical','op-the-radio-show','op-empty-shell-north','op-moonlight','op-mayday','op-dirty-bomb','op-devils-forest','op-neptune-spear','op-thunder-strike-1','op-thunder-strike-2','op-thunder-strike-3','op-thunder-strike-4','op-thunder-strike-5','op-mordor','op-hermes','op-empty-shell-south','op-red-dawn','op-wirecut','op-survival-naked-frogs','op-toxic-cloud-1','op-vulture-nest-end-1','op-vulture-nest-end-2','op-vulture-nest-end-3','op-lone-wolf','op-survival-stranding-ghosts','op-toxic-cloud-2','op-nightstalker-1','op-lone-wolf-2','op-the-radio-show-2','op-black-gold','op-chemical-clearance','op-smugglers-run','op-ravens-fall','op-libertys-fall','op-nightstalker-2','op-nightstalker-3','op-nightstalker-4','op-nightstalker-5','op-nimble-prophet','op-antidote','op-subterra','op-berserker','op-haywire-1','op-iron-fists','op-gigantic-2','op-interference-1','op-haywire-2','op-gigantic-1','op-gigantic-3','op-gigantic-4','op-hammerhead','op-the-big-apple','op-olympus-has-fallen','op-killswitch','op-behemoth','op-origo','op-moon-lake','op-justice','op-murmur','op-in-extremis','op-whisper','op-clear-skies','op-albatros','op-centauri','op-driftwood','op-dark-water','op-flood-wave','op-triad','op-deep-blue-sea','op-cold-resolve','op-renewed-hope','op-blue-remedy','op-rising-tide','op-rumbling-volcano','op-legion','op-echo','op-periculum','op-ground-zero','op-sustained-force','op-hazardous-freight','op-resolution','op-black-ash','op-pitohui','op-white-rabbit','op-rolling-thunder','op-wavelength','op-the-tour-day-1','op-the-stewmaker','op-crypt','op-dagger','op-paramount','op-solaris','op-crescendo','op-poseidon','op-insula','op-snow-leopard','op-eos','op-static','op-hades-spear','op-spearhead','op-interference-2','op-interference-3','op-steel-dust','op-sweet-freedom','op-obsidian','op-basalt','op-mjolnir','op-black-talon','op-coral','op-grey-eagle','op-green-disguise','op-white-disguise'];
+				let randomOperation = operations[Math.floor(Math.random() * operations.length)];
+				alert("The dice says it's time to play : \n\n" + randomOperation + "\n\n" + "Locate the channel on the Discord using the 🔍 in the top right corner of the app or look in folders \n\nOPERATIONS I\nOPERATIONS II\nOPERATIONS III\n\nGood luck and have fun!\n\n");
+			}
+		</script>
+	</center>
+	
+	</div>
+</body>
+</html>
+

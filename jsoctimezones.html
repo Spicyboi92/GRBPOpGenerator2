@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Timezone Converter</title>
+    <style>
+      body {
+        background-color: #333333;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2em;
+        margin-top: 0;
+      }
+      .clock {
+        display: inline-block;
+        margin: 10px;
+      }
+      .clock img {
+        width: 100px;
+        height: 100px;
+      }
+      .clock label {
+        display: block;
+        margin-top: 5px;
+        font-size: 0.8em;
+      }
+    </style>
+	    <script>
+      window.onload = function() {
+        // create a Date object to get the user's local time and timezone
+        var date = new Date();
+        var timeString = date.toLocaleString();
+        var timezoneString = date.toLocaleTimeString('en-us',{timeZoneName:'long'});
+        
+        // display the time and timezone in an HTML element
+        var timeElem = document.getElementById("time");
+        timeElem.innerHTML = "" + "Detected local timezone:<br>" + timezoneString;
+		
+		 
+      };
+	  
+	  
+    </script>
+  </head>
+  <body>
+  <script>
+    function convertTime() {
+     givenLocalTime = document.getElementById('givenLocalTime').value;
+     date = new Date(`1970-01-01T${givenLocalTime}:00`);
+	 
+	 
+    convertedDatePacific = new Intl.DateTimeFormat('en-US', {
+     timeZone: 'America/Los_Angeles',
+      hour: 'numeric',
+      minute: 'numeric'
+    }).format(date);
+	
+	
+	 convertedDateMountain = new Intl.DateTimeFormat('en-US', {
+     timeZone: 'America/Denver',
+      hour: 'numeric',
+      minute: 'numeric'
+    }).format(date);
+	
+	
+	 convertedDateCentral = new Intl.DateTimeFormat('en-US', {
+     timeZone: 'America/Chicago',
+      hour: 'numeric',
+      minute: 'numeric'
+    }).format(date);
+	
+		 convertedDateEastern = new Intl.DateTimeFormat('en-US', {
+     timeZone: 'America/New_york',
+      hour: 'numeric',
+      minute: 'numeric'
+    }).format(date);
+	
+			 convertedDateEurope1 = new Intl.DateTimeFormat('en-US', {
+     timeZone: 'Europe/Berlin',
+      hour: 'numeric',
+      minute: 'numeric'
+    }).format(date);
+	
+	
+	 convertedDateEurope2 = new Intl.DateTimeFormat('en-US', {
+     timeZone: 'Europe/Stockholm',
+      hour: 'numeric',
+      minute: 'numeric'
+    }).format(date);
+	
+	
+			 convertedDateAustralia = new Intl.DateTimeFormat('en-US', {
+     timeZone: 'Australia/Brisbane',
+      hour: 'numeric',
+      minute: 'numeric'
+    }).format(date);
+	
+	
+	document.getElementById('convertedToPacific').textContent = `Pacific Time (West Coast): ${convertedDatePacific}`;
+	document.getElementById('convertedToMountain').textContent = `Mountain Time: ${convertedDateMountain}`;
+	document.getElementById('convertedToCentral').textContent = `Central Time: ${convertedDateCentral}`;
+	document.getElementById('convertedToEastern').textContent = `Eastern Time (East Coast): ${convertedDateEastern}`;
+document.getElementById('convertedToEurope1').textContent = `Europe Central (Germany, Sweden, etc.): ${convertedDateEurope1}`;
+document.getElementById('convertedToAustralia').textContent = `Australia Time: ${convertedDateAustralia}`;
+
+  }
+  </script>
+  
+    <h1>Timezone Converter</h1>
+	<hr>
+ 
+    <p id="time"></p>
+	<hr>
+	 <h3>Show a local time in other timezones</h3>
+	 <p>My time:<br><br><input  style="font-size: 18px" type="time" id="givenLocalTime" name="time"></p>
+	
+		<button style="font-size: 18px; padding: 10px 16px;" onclick="convertTime()">Equals to...</button>
+		<br>
+	  <br>
+		<hr>
+		<p id="convertedToPacific"> </p>
+	
+		<p id="convertedToMountain"> </p>
+		
+		<p id="convertedToCentral"> </p>
+		
+		<p id="convertedToEastern"> </p>
+		
+		<p id="convertedToEurope1"> </p>
+		
+		<p id="convertedToEurope2"> </p>
+		
+		<p id="convertedToAustralia"> </p>
+		
+  
+
+	<hr>
+  </body>
+</html>
